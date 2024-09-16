@@ -32,12 +32,12 @@ class Card:
     def __lt__(self, other_card) -> bool:
         """Метод возвращает False, если карта у которой вызван метод меньше,
         чем карта которую передали в качестве параметра."""
-        # values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-        # suits = ["Spades", "Clubs", "Diamonds", "Hearts"]
-        #
-        # return values.index(self.value) < values.index(other_card.value) \
-        #     if values.index(self.value) != values.index(other_card.value) \
-        #     else suits.index(self.suit) < suits.index(other_card.suit)
+        values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+        suits = ["Spades", "Clubs", "Diamonds", "Hearts"]
+        
+        return values.index(self.value) < values.index(other_card.value) \
+            if values.index(self.value) != values.index(other_card.value) \
+            else suits.index(self.suit) < suits.index(other_card.suit)
         return not self.__gt__(other_card)
 
 
