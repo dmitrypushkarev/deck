@@ -42,7 +42,6 @@ class Card:
 
 
 class Deck:
-    # TODO-0: сюда копируем реализацию класса колоды из предыдущего задания
     def __init__(self):
         # Список карт в колоде. Каждым элементом списка будет объект класса Card
         values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
@@ -50,7 +49,6 @@ class Deck:
         self.cards = [Card(value, suit) for suit in suits for value in values]
 
     def __str__(self) -> str:
-        # TODO-2: Принцип работы данного метода прописан в 00_task_deck.md
         return f"deck[{len(self.cards)}] {', '.join([str(str(card)) for card in self.cards])}"
 
     def draw(self, x) -> list:
